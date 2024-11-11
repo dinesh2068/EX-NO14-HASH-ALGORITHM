@@ -1,5 +1,5 @@
-# EX-NO14-HASH-ALGORITHM
-
+# EX-NO-14-HASH-ALGORITHM
+## DATE:07.11.2024
 ## AIM:
 To implement HASH ALGORITHM
 
@@ -27,9 +27,25 @@ To implement HASH ALGORITHM
 
 
 ## Program:
+```
+import hashlib
 
+def generate_hash(message):
 
+    sha256_hash = hashlib.sha256()
+    sha256_hash.update(message.encode())
+    return sha256_hash.hexdigest()
+
+def main():
+
+    message = input("Enter the message to hash: ")
+    message_hash = generate_hash(message)
+    print(f"Generated Hash (SHA-256): {message_hash}")
+
+main()
+```
 ## Output:
+![image](https://github.com/user-attachments/assets/0a1ae66e-d22f-4948-976c-cae9b9d72bbd)
 
 ## Result:
 The program is executed successfully.
